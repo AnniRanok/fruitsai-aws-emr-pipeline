@@ -82,15 +82,15 @@ AWS EMR • PySpark • TensorFlow • Python • AWS S3
 
 ```
 FruitsAI-Cloud-Pipeline/
-├── pca_reduction.py             # Dimensionality reduction with PySpark
-├── broadcast_model.py           # TensorFlow weights distribution logic
-├── emr_setup.md                 # Step-by-step guide to launching an EMR cluster
-├── sample_notebook.ipynb        # Inherited from former intern, updated and extended
+├── pca_reduction.py             # Distributed PCA using PySpark
+├── broadcast_model.py           # Model weight distribution logic
+├── emr_setup.md                 # WS EMR setup guide
+├── sample_notebook.ipynb        
 ├── data/
-│   └── fruits_dataset/          # Sample image and label data
+│   └── fruits_dataset/          # Sample dataset
 ├── docs/
-│   └── GDPR_compliance.md       # Hosting & privacy considerations
-├── README.md                    # Project overview and goals (this file)
+│   └── GDPR_compliance.md       # Data governance notes
+├── README.md                   
 ```
 
 ## License
