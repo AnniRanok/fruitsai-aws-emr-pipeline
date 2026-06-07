@@ -2,17 +2,20 @@
 # Cloud Data Processing & Distributed ML Pipeline (AWS EMR + PySpark)
 
 ## Project Overview
-This project focuses on designing a scalable cloud-based data processing pipeline for distributed computation and machine learning workflows.
+This project focuses on designing a scalable cloud-based data processing and distributed ML pipeline using AWS EMR and PySpark.
 
-The system demonstrates how large-scale datasets can be processed using AWS EMR and PySpark, with emphasis on **scalability, cost efficiency, and privacy-aware data handling**.
+The system demonstrates how large-scale datasets can be processed in a distributed environment with emphasis on **scalability, cost efficiency, and privacy-aware data handling**.
+
+The architecture is designed for **cloud-native batch processing and feature engineering workflows**.
 
 
 ## Goal
-To build a cloud-native data pipeline that:
-- Processes large-scale image feature data in a distributed environment  
-- Applies dimensionality reduction using PySpark  
+To build a cloud-based distributed data processing pipeline that:
+
+- Processes large-scale datasets in a distributed environment  
+- Applies dimensionality reduction using PySpark (PCA)  
 - Demonstrates model weight distribution across compute nodes  
-- Ensures compliance with GDPR-aligned data handling practices  
+- Implements GDPR-aligned data handling practices  
 - Optimizes infrastructure for cost-efficient execution  
 
 
@@ -20,27 +23,28 @@ To build a cloud-native data pipeline that:
 
 ### 1. AWS EMR Cluster
 - Scalable distributed compute environment  
-- Region-restricted deployment (EU compliance considerations)  
+- Region-restricted deployment (EU compliance-ready setup)  
+- Designed for batch processing workloads  
 
 ### 2. PySpark Processing Layer
 - Distributed feature processing  
 - PCA-based dimensionality reduction at scale  
 
 ### 3. Model Distribution Layer
-- TensorFlow model weight broadcasting across cluster nodes  
-- Efficient memory-aware computation strategy  
+- TensorFlow model weight broadcasting across EMR nodes  
+- Memory-efficient distributed execution strategy  
 
 
 ## Key Implementations
 
 - `pca_reduction.py`  
-  Distributed PCA using PySpark for feature compression  
+  Distributed PCA implementation using PySpark for feature compression  
 
 - `broadcast_model.py`  
-  TensorFlow weight broadcasting across EMR nodes  
+  TensorFlow model weight distribution across cluster nodes  
 
 - `emr_setup.md`  
-  Step-by-step AWS EMR cluster deployment guide  
+  AWS EMR cluster deployment and configuration guide  
 
 
 ## Data Processing Pipeline
@@ -48,36 +52,37 @@ To build a cloud-native data pipeline that:
 2. EMR cluster initialization  
 3. Distributed preprocessing with PySpark  
 4. Dimensionality reduction (PCA)  
-5. Model distribution and execution across nodes  
-6. Output storage for downstream ML tasks  
+5. Model distribution across nodes  
+6. Output storage for downstream ML workflows  
 
+---
 
 ## Key Concepts Demonstrated
 - Cloud-native distributed computing (AWS EMR)  
 - Big data processing with PySpark  
-- Model parameter distribution in cluster environments  
+- Distributed model execution strategies  
 - Dimensionality reduction at scale  
-- GDPR-aware infrastructure design  
-- Cost-efficient ML system design  
+- Data governance and GDPR-aligned design principles  
+- Cost-efficient cloud architecture design  
 
 
 ## Technical Stack
-AWS EMR • PySpark • TensorFlow • Python • S3
+AWS EMR • PySpark • TensorFlow • Python • AWS S3  
 
----
 
 ## Key Takeaways
 - Practical experience with distributed data processing systems  
-- Understanding of scalable ML infrastructure design  
-- Trade-offs between compute cost and processing efficiency  
-- Importance of data governance in cloud-based systems  
+- Design of scalable cloud-based ML pipelines  
+- Trade-offs between compute cost and system performance  
+- Data governance considerations in cloud environments  
+- End-to-end understanding of batch processing architectures  
 
 
-##  Contents
+## Project Structure
 
 ```
 FruitsAI-Cloud-Pipeline/
-├── pca_reduction.py              # Dimensionality reduction with PySpark
+├── pca_reduction.py             # Dimensionality reduction with PySpark
 ├── broadcast_model.py           # TensorFlow weights distribution logic
 ├── emr_setup.md                 # Step-by-step guide to launching an EMR cluster
 ├── sample_notebook.ipynb        # Inherited from former intern, updated and extended
@@ -88,7 +93,6 @@ FruitsAI-Cloud-Pipeline/
 ├── README.md                    # Project overview and goals (this file)
 ```
 
-##  License
-
-MIT License – use freely with attribution.
+## License
+MIT License
 
